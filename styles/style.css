@@ -1,0 +1,57 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto';
+    width:100vw;
+    height:100vh;
+}
+
+#header_sky{
+    background-color:#eeeeee;
+}
+
+#header_sky div{
+    display:flex;
+    align-items: center;
+    height:50px;
+    width:77%;
+    margin:auto;
+}
+
+#logo_sky_header{
+    height:30px;
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#fafaff;
+    text-align:center;
+    border-top:1px solid #ccc;
+    box-shadow: 0px 2px 2px #5858587a;
+}
+
+nav .active{
+    border-bottom:2px solid #e30609;
+    color:#e30609;
+}
+
+nav span{
+    width:100%;
+    padding:10px;
+    font-weight: 700;
+    color:#555454;
+}
+
+nav span:hover{
+    border-bottom:2px solid #e30609;
+}
+
+nav span, .active{
+    cursor:pointer;
+}
