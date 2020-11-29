@@ -8,13 +8,14 @@ body{
     font-family: 'Roboto';
     width:100vw;
     height:100vh;
+    overflow-x:hidden;
 }
 
 #header_sky{
     background-color:#eeeeee;
 }
 
-#header_sky div{
+#header_sky #container_header{
     display:flex;
     align-items: center;
     height:50px;
@@ -26,8 +27,12 @@ body{
     height:30px;
 }
 
+
+
+
+/*botões de navegação do header*/
 nav{
-    display:flex;
+    display:flex !important;
     justify-content: space-between;
     align-items: center;
     background:#fafaff;
@@ -54,4 +59,291 @@ nav span:hover{
 
 nav span, .active{
     cursor:pointer;
+}
+
+
+
+/*icone do header*/
+#div_icons_header{
+    width:100%;
+    display:flex;
+    align-items:center;
+}
+.icons_header{
+    height:20px;
+    width:20px;
+    background:#fff;
+    border-radius:100%;
+    margin:0 5px;
+    padding:4px;
+    cursor:pointer;
+}
+#icon_entrar, #icon_lupa{
+    height:20px;
+    width:20px;
+}
+.accessibility{
+    padding:initial;
+    margin-left:40px;
+}
+#btn_play {
+    margin-left:15%;
+}
+#btn_play img{
+    height:13px;
+    width:13px;
+}
+
+#btn_entrar{
+    position: absolute;
+    right: 20%;
+}
+header div span{
+    margin:0 5px;
+}
+
+
+
+
+
+
+/*carrossel de imagens*/
+.carousel{
+    position: unset !important;
+}
+.carousel-indicators .active{
+    background-color:#e30613 !important;
+}
+a.carousel-control-next,a.carousel-control-prev{
+    top:50% !important;
+}
+
+
+
+
+
+
+
+
+/*Listas de filmes*/
+.movies_sky{
+    width:80%;
+    margin:62% auto 50px;
+}
+
+#catalog_movies_action, #catalog_movies_terror, #catalog_movies_comedia{
+    display:flex;
+    
+    overflow-x: auto;
+}
+
+.movies_catalog_sky{
+    height:200px;
+    margin-right:10px;
+}
+
+.movies_sky img{
+    height:200px;
+    margin:0 10px;
+}
+
+.movies_sky h6{
+    margin-top:50px;
+}
+
+
+
+
+
+
+
+/*Footer*/
+footer{
+    background: #eeeeee;
+    padding-bottom:20px;
+}
+
+#footer_content{
+    display: flex;
+    width: 70%;
+    margin: auto;
+}
+
+#social_media_sky{
+    border-bottom:1px solid #50505026;
+    border-top:1px solid #50505026;
+    padding:15px;
+    display:flex;
+    align-items:center;
+}
+
+#icon_logo_sky_footer{
+    height:30px;
+    margin-left:10%;
+}
+
+.icons_social_media{
+    height:20px;
+    width:20px;
+    margin:5px 10px;
+}
+#social_media_sky div{
+    width: fit-content;
+    position: absolute;
+    right: 8%;
+    
+}
+
+.icons_information_sky{
+    height:50px;
+    width:50px;
+    padding:10px;
+}
+
+#sky_informations{
+    width: fit-content;
+    margin-top: 2%;
+    margin-left:-22px;
+}
+
+#sky_informations #icons_apps{
+    display: flex;
+    align-items: center;
+    width: 310px;
+    margin-left:50px;
+}
+
+#minha_sky{
+    display: flex;
+    width: 318px;
+    font-size:10pt;
+}
+
+#minha_sky p{
+    line-height:1;
+}
+
+#about_sky {
+    display:flex;
+    flex-direction:column;
+    width: fit-content;
+
+    margin:0 10%;
+}
+
+#about_sky h6, #responsibilities_sky h6{
+    color:#00000061;
+    margin:20px 0;
+}
+
+#about_sky a, #responsibilities_sky a{
+    color:#333;
+    line-height:2;
+}
+
+#about_sky a:hover, #responsibilities_sky a:hover{
+    color:#e30613;
+    text-decoration: none;
+}
+
+#responsibilities_sky{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*efeito hamburguer*/
+.container{
+    width: fit-content !important;
+    height:fit-content;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#checkbox-menu{
+    position: absolute;
+    opacity: 0;
+}
+
+label{
+    cursor:pointer;
+    position: relative;
+    display:none !important;
+    height:22px;
+    width:30px;
+}
+
+label span{
+    position: absolute;
+    display:block;
+    height:5px;
+    width:100%;
+    border-radius:30px;
+    background:#e30613;
+    transition:0.25s ease-in-out;
+}
+
+label span:nth-child(1){
+    top:0;
+}
+
+label span:nth-child(2){
+    top:8px;
+}
+
+label span:nth-child(3){
+    top:16px;
+}
+
+#checkbox-menu:checked + label span:nth-child(1){
+    transform: rotate(-45deg);
+    top:8px;
+}
+
+#checkbox-menu:checked + label span:nth-child(2){
+    opacity:0;
+}
+
+#checkbox-menu:checked + label span:nth-child(3){
+    transform:rotate(45deg);
+    top:8px;
+}
+
+
+
+/*Responsividade*/
+@media (max-width: 876px){
+    a.carousel-control-next,a.carousel-control-prev{
+        top:15% !important;
+        height:204px;
+    }
+    .container label{
+        display:block !important;
+        right: 55px;
+        top:14px;
+    position: absolute;
+    }
+    #footer_content{
+        flex-direction: column;
+    }
+    #about_sky{
+        margin:unset;
+    }
+    #div_icons_header{
+        display:none;
+    }
+    #sky_informations #icons_apps{
+        margin-left:0;
+        width:265px;
+    }
+
+    #icons_apps p {
+        font-size:10pt;
+    }
+
+    #logo_sky_header{
+        position: absolute;
+    }
+
 }

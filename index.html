@@ -6,14 +6,47 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="sortcut icon" href="./img/sky_logo_navbar.png" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>SKY</title>
+
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>SKY Play</title>
 </head>
 <body>
 
     <!--Cabeçalho da página-->
     <header id='header_sky'>
-        <div>
+      <!--efeito do menu hamburguer-->
+          <div id='container_header'>
+            <div class="container">
+              <input type="checkbox" name="" id="checkbox-menu">
+              <label for="checkbox-menu" >
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </label>
+            </div>
+
             <img id='logo_sky_header' src="./img/sky_logo.png" alt="Logo da SKY">
+
+            <div id='div_icons_header'>
+                <img class='icons_header accessibility'src="./img/header/accessibility.png" alt="accessibility">
+                <img class='icons_header' src="./img/header/dark_mode_icon.svg" alt="dark mode">
+                <img class='icons_header' src="./img/header/icons8-aumentar-fonte-52.png" alt="aumentar font">
+                <img class='icons_header' src="./img/header/icons8-diminuir-fonte-64.png" alt="diminuir font">
+                <div id='btn_play'>
+                    <img src="./img/header/botao-play.png" alt="botão de play"><span>Play</span>
+                </div>
+                <div id='btn_entrar'>
+                    <img id='icon_entrar' src="./img/header/icon_usuario.png" alt="Entrar">
+                    <span>Entrar</span>
+                    <img id='icon_lupa' src="./img/header/icon_lupa.png" alt="">
+                </div>
+            </div>
+            
         </div>
         <nav>
             <span class='btn_navigation active'>Filmes</span>
@@ -23,13 +56,84 @@
     </header>
 
     <!--Corpo da página-->
-    <section id='section_carrousel' onload="">
+    <section id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <section id='carrossel' class="carousel-inner">
+          <!-- Aqui sera o carousel das imagens tiradas da API -->
+        </section>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+    </section>
+
+    <section class='movies_sky'>
+      <article id='catalog'>
+        <h6>Ação e Aventura</h6>
+        <article id="catalog_movies_action"></article>
+        <h6>Terror</h6>
+        <article id="catalog_movies_terror"></article>
+        <h6>Comédia</h6>
+        <article id="catalog_movies_comedia"></article>
+        <!--Aqui ficará o catalogo dos filmes-->
+      </article>
+      
         
     </section>
-    <section></section>
 
+
+
+    
     <!--Rodape da página-->
-    <footer></footer>
+    <footer>
+      <div id='social_media_sky'>
+        <img id='icon_logo_sky_footer' src="./img/footer/sky_logo_footer.png" alt="">
+        <div>
+          <a href='#'><img class='icons_social_media' src="./img/footer/facebook.png" alt=""></a>
+          <a href='#'><img class='icons_social_media' src="./img/footer/twitter.png" alt=""></a>
+          <a href='#'><img class='icons_social_media' src="./img/footer/youtube.png" alt=""></a>
+          <a href='#'><img class='icons_social_media' src="./img/footer/instagram.png" alt=""></a>
+      
+        </div>
+      </div>
+      <div id='footer_content'>
+        <article id='sky_informations'>
+          <div id='minha_sky'>
+            <img class='icons_information_sky minha_sky'src="./img/footer/icon_minha_sky.png" alt="">
+            <p>Baixe no seu celular o app Minha SKY e divirta-se.</p>
+          </div>
+          <div id='icons_apps'>
+            <p>Dísponivel na <strong>Apple Store</strong></p>
+            <img class='icons_information_sky' src="./img/footer/apple.png" alt="">
+            <p>Dísponivel na <strong>Google Play</strong></p>
+            <img class='icons_information_sky' src="./img/footer/google-play-brands.svg" alt="">
+        </div>
+      </article>
+      <article id='about_sky'>
+        <h6>Sobre</h6>
+        <a href="#">Nossa história</a>
+        <a href="#">Imprensa</a>
+        <a href="#">Prêmios conquistados</a>
+        <a href="#">Credenciamento</a>
+        <a href="#">Trabalhe com a gente</a>
+        <a href="#">Promoção</a>
+        <h6>Ajuda</h6>
+        <a href="#">Central de ajuda</a>
+        <a href="#">Manuais</a>
+      </article>
+      <article id='responsibilities_sky'>
+        <h6>Nossas responsabilidades</h6>
+        <a href="#">Conselho aos usuários</a>
+        <a href="#">Pesquisa Anatel</a>
+        <a href="#">Relatório de transparência</a>
+        <a href="#">Reponsibilidade Social</a>
+        <a href="#">Acessibilidade</a>
+      </article>
+    </div>
+    </footer>
     <script src="./scripts/script.js"></script>
 </body>
 </html>
